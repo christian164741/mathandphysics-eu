@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Books – Math & Physics</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: #000;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 20px 40px;
+      background: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    header nav a {
+      margin-left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    header nav a:hover {
+      color: #FFD700;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px;
+      text-align: left;
+    }
+
+    h1 {
+      color: #FFD700;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #FFD700;
+    }
+
+    p, ul {
+      font-size: 1.1em;
+      color: #ddd;
+    }
+
+    .book {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .book img {
+      max-width: 280px;
+      border: 2px solid #FFD700;
+      border-radius: 6px;
+    }
+
+    .book-info {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    footer {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #FFD700;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><a href="index.html">← Back to Homepage</a></div>
+    <nav>
+      <a href="uebermich.html">About Me</a>
+      <a href="buecher.html">Books</a>
+      <a href="kontakt.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Books</h1>
+
+    <section class="book">
+      <img src="img/vorderseite.png" alt="Book cover Photon – Theory and Applications">
+      <div class="book-info">
+        <h2>Photon – Theory and Applications</h2>
+        <p><em>From Classical Physics to Quantum Mechanics</em></p>
+        <p>
+          What is a photon – wave, particle, or both? This book takes you from the classical 
+          concept of light to quantum mechanics and shows why photons shape modern technology 
+          and fundamental research. Clear, precise, and well-founded.
+        </p>
+        <p>
+          For interested laypeople, students, and everyone who truly wants to understand physics.
+        </p>
+        <h3>Highlights:</h3>
+        <ul>
+          <li>Compact overview from classical physics to quantum mechanics</li>
+          <li>Clear explanations without prior knowledge of advanced mathematics</li>
+          <li>Didactic boxes and examples make access easier</li>
+          <li>Suitable for beginners as well as for students seeking deeper insights</li>
+        </ul>
+        <p><strong>Available in German and English</strong></p>
+        <p style="font-size:1.0em; color:#aaa; margin-top:20px;">
+          This book was created with the support of modern AI tools (e.g. ChatGPT) 
+          for phrasing, structuring, and smoothing the texts. Full content responsibility 
+          and scientific review remain entirely with the author.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>In Preparation</h2>
+      <ul>
+        <li><em>Quantum Computers – From Qubits to the Future of Computing</em></li>
+        <li><em>The Structure of the World – Mathematics Between Abstraction and Reality</em></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © Math and Physics · 
+    <a href="impressum.html">Imprint</a> · 
+    <a href="datenschutz.html">Privacy Policy</a>
+  </footer>
+</body>
+</html>

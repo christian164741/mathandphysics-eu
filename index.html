@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Math & Physics</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background-color: #000; /* Fallback background */
+    }
+
+    /* Hero section */
+    .hero {
+      position: relative;
+      background: url("img/hintergrund.png") no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Greeting text */
+    .hero h1 {
+      font-size: 3em;
+      color: #FFD700;
+      text-shadow: 2px 2px 8px #000;
+      background: rgba(0,0,0,0.3);
+      padding: 20px 40px;
+      border-radius: 15px;
+    }
+
+    /* Menu top right */
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    nav a:hover {
+      color: #FFD700;
+    }
+
+    /* Flags + copyright top left */
+    .flags {
+      position: absolute;
+      top: 20px;
+      left: 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    .flags img {
+      height: 30px;
+      width: auto;
+      margin-right: 10px;
+      cursor: pointer;
+      border: 2px solid white;
+      border-radius: 5px;
+    }
+    .flags img:hover {
+      border-color: #FFD700;
+    }
+
+    .flags .copyright {
+      font-size: 0.9em;
+      color: white;
+      margin-left: 10px;
+      opacity: 0.8;
+      transition: color 0.3s ease;
+    }
+    .flags .copyright:hover {
+      color: #FFD700;
+      opacity: 1;
+    }
+
+    /* Book section */
+    .book-section {
+      background: #111;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .book-section h2 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: #FFD700;
+    }
+
+    .book-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .book-content img {
+      width: 220px;
+      border: 3px solid #fff;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .book-content p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: #ddd;
+      max-width: 600px;
+    }
+
+    /* Button */
+    .book-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: white;
+      background-color: #333;
+      border: 2px solid #FFD700;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .book-button:hover {
+      background-color: #FFD700;
+      color: #000;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9em;
+    }
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <!-- Flags top left -->
+    <div class="flags">
+      <a href="https://mathandphysics.de"><img src="img/de.png" alt="German"></a>
+      <a href="https://mathandphysics.eu"><img src="img/gb.png" alt="English"></a>
+      <span class="copyright">© Math and Physics</span>
+    </div>
+
+    <!-- Menu top right -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="uebermich.html">About Me</a>
+      <a href="buecher.html">Books</a>
+      <a href="kontakt.html">Contact</a>
+    </nav>
+
+    <!-- Greeting text -->
+    <h1>Welcome! Here, science is explained clearly and concisely.</h1>
+  </div>
+
+  <!-- Book section -->
+  <section class="book-section">
+    <h2>📖 Photon – Theory and Applications</h2>
+    <div class="book-content">
+      <img src="img/vorderseite.png" alt="Photon Book Cover">
+      <p>
+        My new book <em>“Photon – Theory and Applications”</em> explains the fascinating world of the light quantum –
+        from historical experiments and quantum electrodynamics to modern applications
+        in laser and information technology.  
+        <br><br>
+        The goal is to present complex topics in a way that is both understandable and precise – 
+        for enthusiasts, students, and everyone curious about how light shapes our universe.
+      </p>
+      <a href="buecher.html" class="book-button">Learn more</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © Math and Physics · 
+    <a href="impressum.html">Imprint</a> · 
+    <a href="datenschutz.html">Privacy Policy</a>
+  </footer>
+</body>
+</html>
