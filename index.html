@@ -1,202 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Math & Physics</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Math & Physics – Clear Science, Well Explained</title>
+  <meta name="description" content="Math & Physics explains complex science clearly: books, articles, and resources on photons, quantum mechanics, and mathematics — precise and accessible." />
+  <meta name="keywords" content="photon, quantum mechanics, mathematics, QED, physics books, science explained" />
+  <meta name="author" content="Christian Weilharter" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Canonical + language alternates -->
+  <link rel="canonical" href="https://mathandphysics.eu/" />
+  <link rel="alternate" href="https://mathandphysics.eu/" hreflang="en" />
+  <link rel="alternate" href="https://mathandphysics.de/" hreflang="de" />
+  <link rel="alternate" href="https://mathandphysics.eu/" hreflang="x-default" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Math & Physics – Clear Science, Well Explained" />
+  <meta property="og:description" content="Books and resources on photons, quantum mechanics, and mathematics — precise and accessible." />
+  <meta property="og:url" content="https://mathandphysics.eu/" />
+  <meta property="og:image" content="https://mathandphysics.eu/img/vorderseite.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Math & Physics – Clear Science, Well Explained" />
+  <meta name="twitter:description" content="Clear explanations of complex science. Photon – Theory and Applications and more." />
+  <meta name="twitter:image" content="https://mathandphysics.eu/img/vorderseite.png" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preload" href="img/hintergrund.png" as="image" />
+  <link rel="preload" href="img/vorderseite.png" as="image" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Math & Physics","url":"https://mathandphysics.eu/","logo":"https://mathandphysics.eu/img/vorderseite.png","sameAs":["https://mathandphysics.de/"]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Math & Physics","url":"https://mathandphysics.eu/","potentialAction":{"@type":"SearchAction","target":"https://mathandphysics.eu/?q={search_term_string}","query-input":"required name=search_term_string"}}
+  </script>
+
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: white;
-      background-color: #000; /* Fallback background */
-    }
+    :root { --gold:#FFD700; --bg1:#000; --bg2:#111; --text:#ddd; --link:#fff; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#fff;background:var(--bg1);line-height:1.6}
 
-    /* Hero section */
-    .hero {
-      position: relative;
-      background: url("img/hintergrund.png") no-repeat center center;
-      background-size: cover;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+    .hero{position:relative;background:url("img/hintergrund.png") no-repeat center/cover;min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center}
+    .hero h1{font-size:clamp(2rem,4vw+1rem,3.2rem);color:var(--gold);text-shadow:2px 2px 8px #000;background:rgba(0,0,0,.35);padding:20px 40px;border-radius:15px;margin:0 16px}
 
-    /* Greeting text */
-    .hero h1 {
-      font-size: 3em;
-      color: #FFD700;
-      text-shadow: 2px 2px 8px #000;
-      background: rgba(0,0,0,0.3);
-      padding: 20px 40px;
-      border-radius: 15px;
-    }
+    nav{position:absolute;top:20px;right:40px;display:flex;gap:20px;flex-wrap:wrap;justify-content:flex-end}
+    nav a{color:var(--link);text-decoration:none;font-weight:bold;font-size:1.05rem}
+    nav a:hover{color:var(--gold)}
 
-    /* Menu top right */
-    nav {
-      position: absolute;
-      top: 20px;
-      right: 40px;
-    }
-    nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.2em;
-    }
-    nav a:hover {
-      color: #FFD700;
-    }
+    .flags{position:absolute;top:20px;left:40px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .flags img{height:30px;width:auto;cursor:pointer;border:2px solid #fff;border-radius:6px;transition:border-color .2s}
+    .flags img:hover{border-color:var(--gold)}
+    .copyright{font-size:.9rem;color:#fff;opacity:.85;transition:opacity .2s,color .2s}
+    .copyright:hover{color:var(--gold);opacity:1}
 
-    /* Flags + copyright top left */
-    .flags {
-      position: absolute;
-      top: 20px;
-      left: 40px;
-      display: flex;
-      align-items: center;
-    }
+    .book-section{background:var(--bg2);padding:60px 20px;text-align:center}
+    .book-section h2{font-size:2rem;margin:0 0 20px;color:var(--gold)}
+    .book-content{display:flex;flex-direction:column;align-items:center;max-width:900px;margin:0 auto;padding:0 12px}
+    .book-content img{width:220px;max-width:60vw;border:3px solid #fff;border-radius:12px;margin-bottom:20px}
+    .book-content p{font-size:1.1rem;line-height:1.7;color:var(--text);max-width:680px;margin:0 auto}
 
-    .flags img {
-      height: 30px;
-      width: auto;
-      margin-right: 10px;
-      cursor: pointer;
-      border: 2px solid white;
-      border-radius: 5px;
-    }
-    .flags img:hover {
-      border-color: #FFD700;
-    }
+    .book-button{display:inline-block;margin-top:22px;padding:12px 22px;font-size:1rem;font-weight:bold;color:#fff;background:#333;border:2px solid var(--gold);border-radius:10px;text-decoration:none;transition:transform .08s,background-color .2s,color .2s}
+    .book-button:hover{background:var(--gold);color:#000;transform:translateY(-1px)}
 
-    .flags .copyright {
-      font-size: 0.9em;
-      color: white;
-      margin-left: 10px;
-      opacity: 0.8;
-      transition: color 0.3s ease;
-    }
-    .flags .copyright:hover {
-      color: #FFD700;
-      opacity: 1;
-    }
+    footer{background:var(--bg2);padding:20px;text-align:center;color:#aaa;font-size:.95rem}
+    footer a{color:var(--gold);text-decoration:none;margin:0 10px}
+    footer a:hover{text-decoration:underline}
 
-    /* Book section */
-    .book-section {
-      background: #111;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .book-section h2 {
-      font-size: 2.2em;
-      margin-bottom: 20px;
-      color: #FFD700;
-    }
-
-    .book-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .book-content img {
-      width: 220px;
-      border: 3px solid #fff;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-
-    .book-content p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      color: #ddd;
-      max-width: 600px;
-    }
-
-    /* Button */
-    .book-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      font-size: 1.1em;
-      font-weight: bold;
-      color: white;
-      background-color: #333;
-      border: 2px solid #FFD700;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-    .book-button:hover {
-      background-color: #FFD700;
-      color: #000;
-    }
-
-    /* Footer */
-    footer {
-      background: #111;
-      padding: 20px;
-      text-align: center;
-      color: #aaa;
-      font-size: 0.9em;
-    }
-    footer a {
-      color: #FFD700;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
+    @media (max-width:540px){nav{right:16px;top:16px;gap:12px}.flags{left:16px;top:16px;gap:8px}}
   </style>
 </head>
 <body>
-  <div class="hero">
-    <!-- Flags top left -->
-    <div class="flags">
-      <a href="https://mathandphysics.de"><img src="img/de.png" alt="German"></a>
-      <a href="https://mathandphysics.eu"><img src="img/gb.png" alt="English"></a>
+  <header class="hero" role="banner">
+    <!-- Flags -->
+    <div class="flags" aria-label="Language Switch">
+      <a href="https://mathandphysics.de/" title="Zur deutschen Seite wechseln">
+        <img src="img/de.png" alt="German (DE flag)" />
+      </a>
+      <a href="https://mathandphysics.eu/" title="You are on the English site">
+        <img src="img/gb.png" alt="English (GB flag)" />
+      </a>
       <span class="copyright">© Math and Physics</span>
     </div>
 
-    <!-- Menu top right -->
-    <nav>
+    <!-- Menu (links auf DE-Dateinamen) -->
+    <nav aria-label="Main Navigation">
       <a href="index.html">Home</a>
-      <a href="uebermich.html">About Me</a>
+      <a href="uebermich.html">About</a>
       <a href="buecher.html">Books</a>
       <a href="kontakt.html">Contact</a>
     </nav>
 
-    <!-- Greeting text -->
-    <h1>Welcome! Here, science is explained clearly and concisely.</h1>
-  </div>
+    <h1>Welcome! We explain complex science clearly and precisely.</h1>
+  </header>
 
-  <!-- Book section -->
-  <section class="book-section">
-    <h2>📖 Photon – Theory and Applications</h2>
-    <div class="book-content">
-      <img src="img/vorderseite.png" alt="Photon Book Cover">
-      <p>
-        My new book <em>“Photon – Theory and Applications”</em> explains the fascinating world of the light quantum –
-        from historical experiments and quantum electrodynamics to modern applications
-        in laser and information technology.  
-        <br><br>
-        The goal is to present complex topics in a way that is both understandable and precise – 
-        for enthusiasts, students, and everyone curious about how light shapes our universe.
-      </p>
-      <a href="buecher.html" class="book-button">Learn more</a>
-    </div>
-  </section>
+  <main>
+    <section class="book-section" aria-labelledby="photon-headline">
+      <h2 id="photon-headline">📖 Photon – Theory and Applications</h2>
+      <div class="book-content">
+        <img src="img/vorderseite.png" alt="Cover of the book: Photon – Theory and Applications" />
+        <p>
+          The book <em>“Photon – Theory and Applications”</em> explores the light quantum from classical foundations
+          to quantum electrodynamics and modern applications in lasers, imaging, and communication.
+          The aim is simple: rigorous science explained accessibly — for enthusiasts, students, and curious minds.
+        </p>
+        <a class="book-button" href="buecher.html" aria-label="Learn more about the Photon book">Learn more</a>
+      </div>
+    </section>
+  </main>
 
-  <!-- Footer -->
   <footer>
-    © Math and Physics · 
-    <a href="impressum.html">Imprint</a> · 
+    © Math and Physics ·
+    <a href="impressum.html">Imprint</a> ·
     <a href="datenschutz.html">Privacy Policy</a>
   </footer>
 </body>
