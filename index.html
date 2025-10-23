@@ -109,14 +109,58 @@
           The aim is simple: rigorous science explained accessibly — for enthusiasts, students, and curious minds.
         </p>
         <a class="book-button" href="buecher.html" aria-label="Learn more about the Photon book">Learn more</a>
+      <p style="color:#FFD700">
+ 
+</p>
+
+
       </div>
+      
     </section>
   </main>
 
+  
+<!-- Footer -->
   <footer>
-    © Math and Physics ·
-    <a href="impressum.html">Imprint</a> ·
-    <a href="datenschutz.html">Privacy Policy</a>
+    © Math and Physics · 
+    <a href="impressum.html">Impressum</a> · 
+    <a href="datenschutz.html">Datenschutz</a>
   </footer>
+
+  <!-- Besucherzähler: unten rechts, fixed -->
+  <div id="counter"
+       style="position:fixed;
+              bottom:10px;
+              right:20px;
+              color:white;
+              font-size:14px;
+              font-family:Arial, sans-serif;
+              z-index:1000;
+              opacity:0.9;">
+    <!-- wird von JS befüllt -->
+  </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Absoluter Pfad ist robuster (auch auf Unterseiten)
+    fetch('/counter.php', { cache: 'no-store' })
+      .then(function (response) {
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        return response.text();
+      })
+      .then(function (data) {
+        var el = document.getElementById('counter');
+        if (el) el.textContent = data;
+      })
+      .catch(function (err) {
+        console.error('Counter-Fehler:', err);
+        // Fallback-Anzeige, damit du sofort siehst, dass JS läuft
+        var el = document.getElementById('counter');
+        if (el) el.textContent = '—';
+      });
+  });
+  </script>
 </body>
 </html>
+
+ 
