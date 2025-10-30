@@ -1,0 +1,22 @@
+# ---------------------------------------------
+# .htaccess – Math & Physics (Strato)
+# Zweck: SEO-Weiterleitungen & HTTPS-Erzwingung
+# ---------------------------------------------
+
+# Aktiviert das Rewrite-Modul
+RewriteEngine On
+
+# --- 1️⃣ Immer HTTPS verwenden ---
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# --- 2️⃣ www auf nicht-www umleiten ---
+RewriteCond %{HTTP_HOST} ^www\.mathandphysics\.eu [NC]
+RewriteRule ^(.*)$ https://mathandphysics.eu/$1 [L,R=301]
+
+# --- 3️⃣ index.html auf Hauptdomain umleiten ---
+RewriteCond %{THE_REQUEST} \s/+(index\.html)\s [NC]
+RewriteRule ^index\.html$ https://mathandphysics.eu/ [L,R=301]
+
+# --- 4️⃣ Optionale Sicherheit: Directory Listing deaktivieren ---
+Options -Indexes
