@@ -31,43 +31,14 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preload" href="img/hintergrund.png" as="image" />
   <link rel="preload" href="img/vorderseite.png" as="image" />
-<!-- JSON-LD -->
- <link rel="canonical" href="https://mathandphysics.eu" />
-<link rel="alternate" hreflang="en" href="https://mathandphysics.eu" />
-<link rel="alternate" hreflang="de" href="https://mathandphysics.de" />
-<link rel="alternate" hreflang="x-default" href="https://mathandphysics.eu" />
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "name": "Math & Physics",
-      "url": "https://mathandphysics.eu/",
-      "logo": "https://mathandphysics.eu/img/logo.png",
-      "founder": { "@type": "Person", "name": "Christian Weilharter" },
-      "sameAs": [
-        "https://zenodo.org/communities/christian-copilot",
-        "https://github.com/christian164741"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "name": "Math & Physics",
-      "url": "https://mathandphysics.eu/",
-      "inLanguage": "en",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://mathandphysics.eu/search.html?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-  ]
-}
-</script>
-
-  
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Math & Physics","url":"https://mathandphysics.eu/","logo":"https://mathandphysics.eu/img/vorderseite.png","sameAs":["https://mathandphysics.de/"]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Math & Physics","url":"https://mathandphysics.eu/","potentialAction":{"@type":"SearchAction","target":"https://mathandphysics.eu/?q={search_term_string}","query-input":"required name=search_term_string"}}
+  </script>
 
   <style>
     :root { --gold:#FFD700; --bg1:#000; --bg2:#111; --text:#ddd; --link:#fff; }
