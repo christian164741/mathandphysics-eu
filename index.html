@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Math & Physics – Books About Mathematics, Physics & Quantum Science</title>
 
-  <title>Math & Physics – Clear Science, Well Explained</title>
-  <meta name="description" content="Math & Physics explains complex science clearly: books, articles, and resources on photons, quantum mechanics, and mathematics — precise and accessible." />
-  <meta name="keywords" content="photon, quantum mechanics, mathematics, QED, physics books, science explained" />
-  <meta name="author" content="Christian Weilharter" />
-  <meta name="robots" content="index,follow" />
-
-  <!-- Canonical + language alternates -->
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Math & Physics: Books and articles about mathematics, physics, quantum mechanics, and the structure of reality – clear, precise, and accessible." />
+  <meta name="keywords" content="The Structure of the World, mathematics, physics, history of science, quantum mechanics, Photon, Gauss, Riemann, Maxwell, Christian Weilharter" />
   <link rel="canonical" href="https://mathandphysics.eu/" />
-  <link rel="alternate" href="https://mathandphysics.eu/" hreflang="en" />
-  <link rel="alternate" href="https://mathandphysics.de/" hreflang="de" />
-  <link rel="alternate" href="https://mathandphysics.eu/" hreflang="x-default" />
+  <link rel="alternate" hreflang="en" href="https://mathandphysics.eu/" />
+  <link rel="alternate" hreflang="de" href="https://mathandphysics.de/" />
+  <link rel="alternate" hreflang="x-default" href="https://mathandphysics.eu/" />
 
-  <!-- Open Graph / Twitter -->
+  <!-- Open Graph Meta -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Math & Physics – Clear Science, Well Explained" />
-  <meta property="og:description" content="Books and resources on photons, quantum mechanics, and mathematics — precise and accessible." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Math & Physics – Books About Mathematics, Physics & Quantum Science" />
+  <meta property="og:description" content="Books and articles about mathematics, physics, and the structure of reality. Featured now: The Structure of the World." />
   <meta property="og:url" content="https://mathandphysics.eu/" />
   <meta property="og:image" content="https://mathandphysics.eu/img/vorderseite.png" />
+  <meta property="og:site_name" content="Math & Physics" />
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Math & Physics – Clear Science, Well Explained" />
-  <meta name="twitter:description" content="Clear explanations of complex science. Photon – Theory and Applications and more." />
+  <meta name="twitter:title" content="Math & Physics – Books About Mathematics, Physics & Quantum Science" />
+  <meta name="twitter:description" content="Books about mathematics, physics, and the structure of reality – explained clearly and precisely." />
   <meta name="twitter:image" content="https://mathandphysics.eu/img/vorderseite.png" />
 
+  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preload" href="img/hintergrund.png" as="image" />
   <link rel="preload" href="img/vorderseite.png" as="image" />
-<!-- JSON-LD -->
- <link rel="canonical" href="https://mathandphysics.eu" />
+  <link rel="preload" href="img/struktur_der_welt.png" as="image" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+<link rel="canonical" href="https://mathandphysics.eu" />
 <link rel="alternate" hreflang="en" href="https://mathandphysics.eu" />
 <link rel="alternate" hreflang="de" href="https://mathandphysics.de" />
 <link rel="alternate" hreflang="x-default" href="https://mathandphysics.eu" />
 
+  <!-- Strukturierte Daten (JSON-LD) -->
+ <!-- JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -67,90 +74,397 @@
 }
 </script>
 
-  
 
+  <!-- Styles -->
   <style>
-    :root { --gold:#FFD700; --bg1:#000; --bg2:#111; --text:#ddd; --link:#fff; }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#fff;background:var(--bg1);line-height:1.6}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background-color: #000;
+    }
 
-    .hero{position:relative;background:url("img/hintergrund.png") no-repeat center/cover;min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center}
-    .hero h1{font-size:clamp(2rem,4vw+1rem,3.2rem);color:var(--gold);text-shadow:2px 2px 8px #000;background:rgba(0,0,0,.35);padding:20px 40px;border-radius:15px;margin:0 16px}
+    /* Hero area with background image */
+    .hero {
+      position: relative;
+      background: url("img/hintergrund.png") no-repeat center center;
+      background-size: cover;
+      min-height: 100vh;
+      box-sizing: border-box;
+      padding: 100px 20px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      text-align: center;
+    }
 
-    nav{position:absolute;top:20px;right:40px;display:flex;gap:20px;flex-wrap:wrap;justify-content:flex-end}
-    nav a{color:var(--link);text-decoration:none;font-weight:bold;font-size:1.05rem}
-    nav a:hover{color:var(--gold)}
+    .hero h1 {
+      font-size: 3em;
+      color: #FFD700;
+      text-shadow: 2px 2px 8px #000;
+      background: rgba(0,0,0,0.3);
+      padding: 20px 40px;
+      border-radius: 15px;
+    }
 
-    .flags{position:absolute;top:20px;left:40px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-    .flags img{height:30px;width:auto;cursor:pointer;border:2px solid #fff;border-radius:6px;transition:border-color .2s}
-    .flags img:hover{border-color:var(--gold)}
-    .copyright{font-size:.9rem;color:#fff;opacity:.85;transition:opacity .2s,color .2s}
-    .copyright:hover{color:var(--gold);opacity:1}
+    /* Navigation */
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    nav a:hover {
+      color: #FFD700;
+    }
 
-    .book-section{background:var(--bg2);padding:60px 20px;text-align:center}
-    .book-section h2{font-size:2rem;margin:0 0 20px;color:var(--gold)}
-    .book-content{display:flex;flex-direction:column;align-items:center;max-width:900px;margin:0 auto;padding:0 12px}
-    .book-content img{width:220px;max-width:60vw;border:3px solid #fff;border-radius:12px;margin-bottom:20px}
-    .book-content p{font-size:1.1rem;line-height:1.7;color:var(--text);max-width:680px;margin:0 auto}
+    /* Language switcher and copyright */
+    .flags {
+      position: absolute;
+      top: 20px;
+      left: 40px;
+      display: flex;
+      align-items: center;
+    }
+    .flags img {
+      height: 30px;
+      width: auto;
+      margin-right: 10px;
+      cursor: pointer;
+      border: 2px solid white;
+      border-radius: 5px;
+    }
+    .flags img:hover {
+      border-color: #FFD700;
+    }
+    .flags .copyright {
+      font-size: 0.9em;
+      color: white;
+      margin-left: 10px;
+      opacity: 0.8;
+      transition: color 0.3s ease;
+    }
+    .flags .copyright:hover {
+      color: #FFD700;
+      opacity: 1;
+    }
 
-    .book-button{display:inline-block;margin-top:22px;padding:12px 22px;font-size:1rem;font-weight:bold;color:#fff;background:#333;border:2px solid var(--gold);border-radius:10px;text-decoration:none;transition:transform .08s,background-color .2s,color .2s}
-    .book-button:hover{background:var(--gold);color:#000;transform:translateY(-1px)}
+    /* Book section */
+    .book-section {
+      width: min(100%, 900px);
+      box-sizing: border-box;
+      background: rgba(17,17,17,0.82);
+      padding: 40px 20px;
+      border-radius: 15px;
+      text-align: center;
+    }
+    .book-section h2 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: #FFD700;
+    }
+    .home-books-carousel {
+      position: relative;
+      display: flex;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 46px;
+    }
 
-    footer{background:var(--bg2);padding:20px;text-align:center;color:#aaa;font-size:.95rem}
-    footer a{color:var(--gold);text-decoration:none;margin:0 10px}
-    footer a:hover{text-decoration:underline}
+    .home-books-viewport {
+      width: 100%;
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
 
-    @media (max-width:540px){nav{right:16px;top:16px;gap:12px}.flags{left:16px;top:16px;gap:8px}}
+    .home-books-viewport::-webkit-scrollbar {
+      display: none;
+    }
+
+    .home-books-track {
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+    }
+
+    .home-book-card {
+      flex: 0 0 calc((100% - 32px) / 2);
+      box-sizing: border-box;
+      scroll-snap-align: start;
+    }
+
+    .home-book-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .home-book-card img {
+      display: block;
+      width: 220px;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      border: 3px solid #fff;
+      border-radius: 10px;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .home-book-title {
+      display: block;
+      margin-top: 12px;
+      font-size: 1em;
+      font-weight: bold;
+      color: #ddd;
+    }
+
+    .home-book-link:hover img,
+    .home-book-link:focus-visible img {
+      border-color: #FFD700;
+      transform: translateY(-3px);
+    }
+
+    .home-book-link:hover .home-book-title,
+    .home-book-link:focus-visible .home-book-title {
+      color: #FFD700;
+    }
+
+    .home-carousel-arrow {
+      position: absolute;
+      top: 165px;
+      z-index: 2;
+      width: 38px;
+      height: 48px;
+      padding: 0;
+      color: white;
+      background-color: #333;
+      border: 2px solid #FFD700;
+      border-radius: 8px;
+      font-size: 2rem;
+      line-height: 1;
+      cursor: pointer;
+      transform: translateY(-50%);
+      transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+    }
+
+    .home-carousel-arrow:hover,
+    .home-carousel-arrow:focus-visible {
+      background-color: #FFD700;
+      color: #000;
+    }
+
+    .home-carousel-arrow:disabled {
+      cursor: default;
+      opacity: 0.35;
+    }
+
+    .home-carousel-arrow--previous {
+      left: 0;
+    }
+
+    .home-carousel-arrow--next {
+      right: 0;
+    }
+
+    @media (min-width: 1000px) {
+      .home-books-track:has(.home-book-card:nth-child(3)) .home-book-card {
+        flex-basis: calc((100% - 64px) / 3);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .home-books-carousel {
+        padding: 0 36px;
+      }
+
+      .home-book-card {
+        flex-basis: 100%;
+      }
+
+      .home-book-card img {
+        width: 200px;
+      }
+
+      .home-carousel-arrow {
+        top: 150px;
+        width: 30px;
+        height: 44px;
+        font-size: 1.7rem;
+      }
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9em;
+    }
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
-<body>
-  <header class="hero" role="banner">
-   
 
-    <!-- Menu (links auf DE-Dateinamen) -->
-    <nav aria-label="Main Navigation">
+<body>
+  <!-- Hero area -->
+  <div class="hero">
+
+    <nav>
       <a href="index.html">Home</a>
       <a href="uebermich.html">About</a>
       <a href="buecher.html">Books</a>
-       <a href="publications.html">Puplications</a>
       <a href="kontakt.html">Contact</a>
-      
-      <a href="https://mathandphysics.de" aria-label="Deutsch (zur .de-Seite)">🇩🇪 DE</a>
+      <a href="publications.html">Publications</a>
+      <a href="https://mathandphysics.de" class="lang" aria-label="German" title="German">🇩🇪 DE</a>
     </nav>
 
-    <h1>Welcome! We explain complex science clearly and precisely.</h1>
-  </header>
+    <h1>Welcome! Science explained clearly and concisely.</h1>
 
-  <main>
-    <section class="book-section" aria-labelledby="photon-headline">
-      <h2 id="photon-headline">📖 Photon – Theory and Applications</h2>
-      <div class="book-content">
-        <img src="img/vorderseite.png" alt="Cover of the book: Photon – Theory and Applications" />
-        <p>
-          The book <em>“Photon – Theory and Applications”</em> explores the light quantum from classical foundations
-          to quantum electrodynamics and modern applications in lasers, imaging, and communication.
-          The aim is simple: rigorous science explained accessibly — for enthusiasts, students, and curious minds.
-        </p>
-        <a class="book-button" href="buecher.html" aria-label="Learn more about the Photon book">Learn more</a>
-      <p style="color:#FFD700">
- 
-</p>
-
-
+    <!-- Book section -->
+    <section class="book-section">
+      <h2>📖 Published Books</h2>
+      <div class="home-books-carousel" aria-label="Published Books">
+        <button class="home-carousel-arrow home-carousel-arrow--previous" type="button" aria-label="Previous Book" aria-controls="home-books-viewport">‹</button>
+        <div class="home-books-viewport" id="home-books-viewport" tabindex="0">
+          <div class="home-books-track">
+            <article class="home-book-card">
+              <a class="home-book-link" href="buecher.html">
+                <img src="img/vorderseite.png" alt="Book cover Photon – Theory and Applications">
+                <span class="home-book-title">Photon – Theory and Applications</span>
+              </a>
+            </article>
+            <article class="home-book-card">
+              <a class="home-book-link" href="buecher.html">
+                <img src="img/struktur_der_welt.png" alt="Book cover The Structure of the World">
+                <span class="home-book-title">The Structure of the World</span>
+              </a>
+            </article>
+          </div>
+        </div>
+        <button class="home-carousel-arrow home-carousel-arrow--next" type="button" aria-label="Next Book" aria-controls="home-books-viewport">›</button>
       </div>
-      
     </section>
-  </main>
+  </div>
 
-  
-<!-- Footer -->
+  <!-- Footer -->
   <footer>
-    © Math and Physics · 
-    <a href="impressum.html">Impressum</a> · 
-    <a href="datenschutz.html">Datenschutz</a>
+    © Math and Physics ·
+    <a href="impressum.html">Imprint</a> ·
+    <a href="datenschutz.html">Privacy Policy</a>
+</div>
+
+</div>
+
   </footer>
 
-  <!-- Besucherzähler: unten rechts, fixed -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var carousel = document.querySelector('.home-books-carousel');
+    if (!carousel) return;
+
+    var viewport = carousel.querySelector('.home-books-viewport');
+    var track = carousel.querySelector('.home-books-track');
+    var books = Array.from(track.querySelectorAll('.home-book-card'));
+    var previousButton = carousel.querySelector('.home-carousel-arrow--previous');
+    var nextButton = carousel.querySelector('.home-carousel-arrow--next');
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var pointerInteraction = false;
+    var interactionPauseTimer;
+
+    function maximumScroll() {
+      return Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+    }
+
+    function scrollStep() {
+      if (!books.length) return viewport.clientWidth;
+      var gap = parseFloat(window.getComputedStyle(track).gap) || 0;
+      return books[0].getBoundingClientRect().width + gap;
+    }
+
+    function updateButtons() {
+      var maximum = maximumScroll();
+      previousButton.disabled = viewport.scrollLeft <= 1;
+      nextButton.disabled = viewport.scrollLeft >= maximum - 1;
+    }
+
+    function move(direction, wrapAround) {
+      var maximum = maximumScroll();
+      if (maximum <= 1) return;
+
+      var target = viewport.scrollLeft + direction * scrollStep();
+      if (wrapAround && direction > 0 && viewport.scrollLeft >= maximum - 1) target = 0;
+      if (wrapAround && direction < 0 && viewport.scrollLeft <= 1) target = maximum;
+
+      viewport.scrollTo({
+        left: Math.max(0, Math.min(maximum, target)),
+        behavior: reducedMotion ? 'auto' : 'smooth'
+      });
+    }
+
+    function autoplayPaused() {
+      return document.hidden || carousel.matches(':hover') || carousel.contains(document.activeElement) || pointerInteraction;
+    }
+
+    function pauseAfterInteraction() {
+      pointerInteraction = true;
+      window.clearTimeout(interactionPauseTimer);
+      interactionPauseTimer = window.setTimeout(function () {
+        pointerInteraction = false;
+      }, 8000);
+    }
+
+    previousButton.addEventListener('click', function () {
+      pauseAfterInteraction();
+      move(-1, false);
+    });
+    nextButton.addEventListener('click', function () {
+      pauseAfterInteraction();
+      move(1, false);
+    });
+    viewport.addEventListener('scroll', updateButtons, { passive: true });
+    viewport.addEventListener('keydown', function (event) {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        pauseAfterInteraction();
+        move(-1, false);
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        pauseAfterInteraction();
+        move(1, false);
+      }
+    });
+    carousel.addEventListener('pointerdown', pauseAfterInteraction);
+    window.addEventListener('resize', updateButtons);
+
+    if (!reducedMotion) {
+      window.setInterval(function () {
+        if (!autoplayPaused()) move(1, true);
+      }, 6000);
+    }
+
+    updateButtons();
+  });
+  </script>
+
+  <!-- Visitor counter: fixed at the bottom right -->
   <div id="counter"
        style="position:fixed;
               bottom:10px;
@@ -160,12 +474,12 @@
               font-family:Arial, sans-serif;
               z-index:1000;
               opacity:0.9;">
-    <!-- wird von JS befüllt -->
+    <!-- Filled by JavaScript -->
   </div>
 
   <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Absoluter Pfad ist robuster (auch auf Unterseiten)
+    // An absolute path is more robust on subpages.
     fetch('/counter.php', { cache: 'no-store' })
       .then(function (response) {
         if (!response.ok) throw new Error('HTTP ' + response.status);
@@ -176,8 +490,8 @@
         if (el) el.textContent = data;
       })
       .catch(function (err) {
-        console.error('Counter-Fehler:', err);
-        // Fallback-Anzeige, damit du sofort siehst, dass JS läuft
+        console.error('Counter error:', err);
+        // Fallback display when the counter cannot be loaded.
         var el = document.getElementById('counter');
         if (el) el.textContent = '—';
       });
@@ -185,5 +499,3 @@
   </script>
 </body>
 </html>
-
- 

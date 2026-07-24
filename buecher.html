@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Books – Math & Physics</title>
   <style>
     body {
@@ -59,21 +60,157 @@
 
     .book {
       display: flex;
-      flex-wrap: wrap;
+      flex: 0 0 calc((100% - 24px) / 2);
+      flex-direction: column;
       align-items: flex-start;
-      gap: 20px;
-      margin-bottom: 50px;
+      gap: 18px;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 20px;
+      background: #080808;
+      border: 1px solid #333;
+      border-radius: 10px;
+      scroll-snap-align: start;
     }
 
     .book img {
+      display: block;
+      width: 100%;
       max-width: 280px;
+      height: auto;
       border: 2px solid #FFD700;
       border-radius: 6px;
     }
 
     .book-info {
-      flex: 1;
-      min-width: 280px;
+      width: 100%;
+      min-width: 0;
+    }
+
+    .book-info > h2:first-child {
+      min-height: 3.2em;
+    }
+
+    .book-info > h2:first-child + p {
+      min-height: 3.2em;
+    }
+
+    .book-cover-link {
+      display: block;
+      align-self: center;
+      max-width: 280px;
+    }
+
+    .book-title-link {
+      color: #FFD700;
+      text-decoration: none;
+    }
+
+    .book-title-link:hover,
+    .book-title-link:focus-visible {
+      text-decoration: underline;
+    }
+
+    .book-info a[target="_blank"] {
+      display: inline-block;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .books-carousel {
+      position: relative;
+      max-width: 100%;
+      margin-bottom: 50px;
+      padding: 0 46px;
+    }
+
+    .books-viewport {
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+
+    .books-viewport::-webkit-scrollbar {
+      display: none;
+    }
+
+    .books-track {
+      display: flex;
+      align-items: stretch;
+      gap: 24px;
+    }
+
+    .carousel-arrow {
+      position: absolute;
+      top: 240px;
+      z-index: 2;
+      width: 38px;
+      height: 48px;
+      padding: 0;
+      border: 2px solid #FFD700;
+      border-radius: 8px;
+      color: white;
+      background: #333;
+      font-size: 2rem;
+      line-height: 1;
+      cursor: pointer;
+      transform: translateY(-50%);
+      transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+    }
+
+    .carousel-arrow:hover,
+    .carousel-arrow:focus-visible {
+      color: #000;
+      background: #FFD700;
+    }
+
+    .carousel-arrow:disabled {
+      cursor: default;
+      opacity: 0.35;
+    }
+
+    .carousel-arrow--previous {
+      left: 0;
+    }
+
+    .carousel-arrow--next {
+      right: 0;
+    }
+
+    @media (min-width: 1200px) {
+      .books-track:has(.book:nth-child(3)) .book {
+        flex-basis: calc((100% - 48px) / 3);
+      }
+    }
+
+    @media (max-width: 700px) {
+      main {
+        margin: 30px auto;
+        padding: 15px;
+      }
+
+      .books-carousel {
+        padding: 0 36px;
+      }
+
+      .book {
+        flex-basis: 100%;
+        padding: 16px;
+      }
+
+      .book img,
+      .book-cover-link {
+        max-width: 220px;
+      }
+
+      .carousel-arrow {
+        top: 200px;
+        width: 30px;
+        height: 44px;
+        font-size: 1.7rem;
+      }
     }
 
     footer {
@@ -100,96 +237,236 @@
     <nav>
       <a href="uebermich.html">About Me</a>
       <a href="buecher.html">Books</a>
-       <a href="publications.html">Puplications</a>
+       <a href="publications.html">Publications</a>
       <a href="kontakt.html">Contact</a>
     </nav>
   </header>
 
   <main>
     <h1>Books</h1>
- <section class="book">
-      <img src="img/vorderseite.png" alt="Book cover Photon – Theory and Applications">
+
+    <div class="books-carousel" aria-label="Published Books">
+      <button class="carousel-arrow carousel-arrow--previous" type="button" aria-label="Previous Book" aria-controls="books-viewport">‹</button>
+      <div class="books-viewport" id="books-viewport" tabindex="0">
+        <div class="books-track">
+      <section class="book">
+  <a class="book-cover-link" href="https://www.amazon.com/dp/3912302081" target="_blank" rel="noopener">
+    <img src="img/vorderseite.png" alt="Book cover Photon – Theory and Applications">
+  </a>
+  <div class="book-info">
+    <h2><a class="book-title-link" href="https://www.amazon.com/dp/3912302081" target="_blank" rel="noopener">Photon – Theory and Applications</a></h2>
+    <p><em>From Classical Physics to Quantum Mechanics</em></p>
+    <p>
+      What is a photon – a wave, a particle, or both? This book leads from the classical
+      picture of light to quantum mechanics and shows why photons shape modern technology
+      and fundamental research. Clear, precise, and well-founded.
+    </p>
+    <p>
+      For curious readers, students, and anyone who truly wants to understand physics.
+    </p>
+    <h3>Highlights:</h3>
+    <ul>
+      <li>Compact overview from classical physics to quantum mechanics</li>
+      <li>Clear explanations without requiring advanced mathematics</li>
+      <li>Didactic boxes and examples for intuitive understanding</li>
+      <li>Suitable for beginners and as in-depth reading for students</li>
+    </ul>
+    <p><strong>Available in German and English</strong></p>
+
+    <!-- 📘 Download and publication block -->
+    <div style="margin-top:25px; border-top:1px solid #333; padding-top:15px;">
+      <h3 style="color:#FFD700;">📥 Free Download (PDF)</h3>
+      <p>
+        The complete English edition of <em>Photon – Theory and Applications</em>
+        is freely available on <strong>Zenodo</strong>:
+      </p>
+      <p>
+        <a href="https://doi.org/10.5281/zenodo.17404913" target="_blank" style="background:#0056b3; color:#fff; padding:8px 14px; text-decoration:none; border-radius:6px;">
+          ➜ Download PDF on Zenodo
+        </a>
+      </p>
+
+         <a href="https://www.amazon.com/dp/3912302081" target="_blank" style="background:#0056b3; color:#fff; padding:8px 14px; text-decoration:none; border-radius:6px;">
+          ➜ Now available as a book on Amazon
+        </a>
+
+
+
+    </div>
+
+</div>
+</section>
+
+    <section class="book">
+      <a class="book-cover-link" href="https://www.amazon.de/dp/3912302111" target="_blank" rel="noopener">
+        <img src="img/struktur_der_welt.png" alt="Book cover The Structure of the World">
+      </a>
       <div class="book-info">
-        <h2>Photon – Theory and Applications</h2>
-        <p><em>From Classical Physics to Quantum Mechanics</em></p>
-
+        <h2><a class="book-title-link" href="https://www.amazon.de/dp/3912302111" target="_blank" rel="noopener">The Structure of the World</a></h2>
+        <p><em>Mathematics Between Abstraction and Reality</em></p>
         <p>
-          What is a photon – a wave, a particle, or both?  
-          This book leads from the classical picture of light to quantum mechanics, 
-          showing how photons shape modern technology and fundamental research. 
-          Clear, precise, and engaging.
+          The book investigates a fundamental question: Why does mathematics describe the real world so remarkably well?
+          From the early mathematical ideas of antiquity through Galileo, Newton, Gauss, Riemann, and Maxwell to modern
+          quantum mechanics, it shows how mathematical structures have repeatedly led to a deeper understanding of nature.
         </p>
-
         <p>
-          For curious readers, students, and anyone who truly wants to understand physics.
+          It considers mathematics not only as a tool, but also asks whether mathematical structures may form a
+          fundamental part of reality itself.
         </p>
-
+        <p>
+          For readers interested in mathematics, physics, and philosophy, as well as students and anyone with a general
+          interest in science.
+        </p>
         <h3>Highlights:</h3>
         <ul>
-          <li>Compact overview from classical physics to quantum mechanics</li>
-          <li>Clear explanations without requiring advanced mathematics</li>
-          <li>Didactic boxes and examples for intuitive understanding</li>
-          <li>Suitable for beginners and as in-depth reading for students</li>
+          <li>Development of mathematical ideas from antiquity to modern physics</li>
+          <li>Connections between mathematics, physics, and the history of science</li>
+          <li>The roles of Gauss, Riemann, Maxwell, and quantum mechanics</li>
+          <li>The question of whether mathematics is invented or discovered</li>
+          <li>Accessible presentation supported by mathematical foundations</li>
         </ul>
+        <p><strong>Published in German</strong></p>
 
-        <p><strong>Available in German and English</strong></p>
-
-        <!-- 📘 Download and publication block -->
         <div style="margin-top:25px; border-top:1px solid #333; padding-top:15px;">
           <h3 style="color:#FFD700;">📥 Free Download (PDF)</h3>
           <p>
-            The complete English edition of <em>Photon – Theory and Applications</em> 
-            is freely available on <strong>Zenodo</strong>:
+            The complete German edition of <em>The Structure of the World</em> is freely available on <strong>Zenodo</strong>:
           </p>
           <p>
-            <a href="https://doi.org/10.5281/zenodo.17404913" target="_blank" 
-               style="background:#0056b3; color:#fff; padding:8px 14px; 
-                      text-decoration:none; border-radius:6px;">
+            <a href="https://doi.org/10.5281/zenodo.21487193" target="_blank" rel="noopener" style="background:#0056b3; color:#fff; padding:8px 14px; text-decoration:none; border-radius:6px;">
               ➜ Download PDF on Zenodo
             </a>
           </p>
-
-          
-          </p>
-
-          <p style="margin-top:15px; color:#ddd;">
-            📗 <strong>Coming soon:</strong><br>
-            – <em>Print edition</em> via Amazon KDP<br>
-            – <em>E-Book edition</em> on Apple Books
+          <p>
+            <a href="https://www.amazon.de/dp/3912302111" target="_blank" rel="noopener" style="background:#0056b3; color:#fff; padding:8px 14px; text-decoration:none; border-radius:6px;">
+              ➜ Now available as a book on Amazon
+            </a>
           </p>
         </div>
-
-        <p style="font-size:1.0em; color:#aaa; margin-top:20px;">
-          This book was created with the assistance of modern AI tools (e.g., ChatGPT) 
-          for phrasing, structuring, and language refinement.  
-          The scientific responsibility and verification remain entirely with the author.
-        </p>
-        <p style="text-align:center; margin: 16px 0 0;">
-  <a href="https://zenodo.org/communities/christian-copilot/records?sort=newest"
-     target="_blank" rel="noopener"
-     style="display:inline-block;padding:12px 18px;border:2px solid #FFD700;border-radius:8px;
-            text-decoration:none;font-weight:700;color:#fff;background:#333;">
-    View the latest publications on Zenodo →
-  </a>
-</p>
-
       </div>
     </section>
+        </div>
+      </div>
+      <button class="carousel-arrow carousel-arrow--next" type="button" aria-label="Next Book" aria-controls="books-viewport">›</button>
+    </div>
 
-    
+    <p style="font-size:1.0em; color:#aaa; margin-top:20px;">
+      These books were created with the assistance of modern AI tools (e.g. ChatGPT)
+      for phrasing, structuring, and language refinement. The scientific responsibility
+      and verification remain entirely with the author.
+    </p>
+
+    <p style="text-align:center; margin: 16px 0 0;">
+      <a href="https://zenodo.org/communities/christian-copilot/records?sort=newest"
+         target="_blank" rel="noopener"
+         style="display:inline-block;padding:12px 18px;border:2px solid #FFD700;border-radius:8px;
+                text-decoration:none;font-weight:700;color:#fff;background:#333;">
+        View the latest publications on Zenodo →
+      </a>
+    </p>
+
     <section>
       <h2>In Preparation</h2>
       <ul>
-        <li><em>Quantum Computers – From Qubits to the Future of Computing</em></li>
-        <li><em>The Structure of the World – Mathematics Between Abstraction and Reality</em></li>
+        <li><em>Electron – Theory and Applications</em></li>
       </ul>
     </section>
   </main>
 
   <footer>
-    © Math and Physics · 
-    <a href="impressum.html">Imprint</a> · 
+    © Math and Physics ·
+    <a href="impressum.html">Imprint</a> ·
     <a href="datenschutz.html">Privacy Policy</a>
   </footer>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var carousel = document.querySelector('.books-carousel');
+    if (!carousel) return;
+
+    var viewport = carousel.querySelector('.books-viewport');
+    var track = carousel.querySelector('.books-track');
+    var books = Array.from(track.querySelectorAll('.book'));
+    var previousButton = carousel.querySelector('.carousel-arrow--previous');
+    var nextButton = carousel.querySelector('.carousel-arrow--next');
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var pointerInteraction = false;
+    var interactionPauseTimer;
+
+    function maximumScroll() {
+      return Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+    }
+
+    function scrollStep() {
+      if (!books.length) return viewport.clientWidth;
+      var gap = parseFloat(window.getComputedStyle(track).gap) || 0;
+      return books[0].getBoundingClientRect().width + gap;
+    }
+
+    function updateButtons() {
+      var maximum = maximumScroll();
+      previousButton.disabled = viewport.scrollLeft <= 1;
+      nextButton.disabled = viewport.scrollLeft >= maximum - 1;
+    }
+
+    function move(direction, wrapAround) {
+      var maximum = maximumScroll();
+      if (maximum <= 1) return;
+
+      var target = viewport.scrollLeft + direction * scrollStep();
+      if (wrapAround && direction > 0 && viewport.scrollLeft >= maximum - 1) target = 0;
+      if (wrapAround && direction < 0 && viewport.scrollLeft <= 1) target = maximum;
+
+      viewport.scrollTo({
+        left: Math.max(0, Math.min(maximum, target)),
+        behavior: reducedMotion ? 'auto' : 'smooth'
+      });
+    }
+
+    function autoplayPaused() {
+      return document.hidden || carousel.matches(':hover') || carousel.contains(document.activeElement) || pointerInteraction;
+    }
+
+    function pauseAfterInteraction() {
+      pointerInteraction = true;
+      window.clearTimeout(interactionPauseTimer);
+      interactionPauseTimer = window.setTimeout(function () {
+        pointerInteraction = false;
+      }, 8000);
+    }
+
+    previousButton.addEventListener('click', function () {
+      pauseAfterInteraction();
+      move(-1, false);
+    });
+    nextButton.addEventListener('click', function () {
+      pauseAfterInteraction();
+      move(1, false);
+    });
+    viewport.addEventListener('scroll', updateButtons, { passive: true });
+    viewport.addEventListener('keydown', function (event) {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        pauseAfterInteraction();
+        move(-1, false);
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        pauseAfterInteraction();
+        move(1, false);
+      }
+    });
+    carousel.addEventListener('pointerdown', function () {
+      pauseAfterInteraction();
+    });
+    window.addEventListener('resize', updateButtons);
+
+    if (!reducedMotion) {
+      window.setInterval(function () {
+        if (!autoplayPaused()) move(1, true);
+      }, 6000);
+    }
+
+    updateButtons();
+  });
+  </script>
 </body>
 </html>

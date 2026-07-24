@@ -1,18 +1,13 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mathandphysics.eu/sitemap.xml
-# --- ChatGPT / OpenAI Bots explizit erlauben ---
 User-agent: OAI-SearchBot
 Allow: /
 
-# Besucher aus ChatGPTs integriertem Browser
 User-agent: ChatGPT-User
 Allow: /
 
-# Optional: Trainings-Crawler von OpenAI
-# → Wenn du Training erlauben willst: Allow
-# → Wenn du es NICHT willst: Disallow
 User-agent: GPTBot
-Allow: /
-# Disallow: /
+Disallow: /
+
+Sitemap: https://mathandphysics.eu/sitemap.xml
